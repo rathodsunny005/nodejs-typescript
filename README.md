@@ -7,6 +7,15 @@ This project uses Docker for containerization. You can easily spin up the develo
 
 ## 🚀 Getting Started
 
+### Create .env file
+create env file with below content
+```
+PORT=4000
+NODE_ENV=production
+DB_URL=your_db_url
+
+```
+
 ### 🔧 For Development
 
 To build and run the development environment:
@@ -22,4 +31,5 @@ To build and run the production environment:
 ```bash
 docker-compose -f docker-compose.prod.yml up --build
 ```
+
 
