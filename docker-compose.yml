@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: nodejs-typescript
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "${PORT}:${PORT}"
+    env_file:
+      - .env
+    command: npm run dev
